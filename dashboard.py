@@ -6,7 +6,7 @@ import pandas as pd
 # --------------------------
 # Setup AssemblyAI
 # --------------------------
-aai.settings.api_key = "27879e3826214e3885ad655d718e41dc"
+aai.settings.api_key = "APIKEY"
 
 # Hugging Face sentiment pipeline (text-based)
 sentiment_pipeline = pipeline(
@@ -101,3 +101,4 @@ if uploaded_file is not None:
 
     tone_counts = df.groupby("Speaker")["SER Emotion (Tone)"].value_counts().unstack().fillna(0)
     st.bar_chart(tone_counts)
+
