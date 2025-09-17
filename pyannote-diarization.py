@@ -2,7 +2,7 @@ from pyannote.audio import Pipeline
 import os
 
 # Put your Hugging Face token here (or set it as environment variable HF_TOKEN)
-HF_TOKEN = os.environ.get("HF_TOKEN") or "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"
+HF_TOKEN = os.environ.get("HF_TOKEN") or "APIKEY"
 
 # Load the pretrained diarization pipeline
 pipeline = Pipeline.from_pretrained(
@@ -17,3 +17,4 @@ diarization = pipeline("c:/Users/Tejaswi/Desktop/Unity/meeting.mp3")
 # Print speaker segments
 for turn, _, speaker in diarization.itertracks(yield_label=True):
     print(f"{turn.start:.1f}s - {turn.end:.1f}s: {speaker}")
+
