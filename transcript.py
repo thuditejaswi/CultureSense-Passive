@@ -5,7 +5,7 @@ from transformers import pipeline
 import streamlit as st
 
 # ----------------------------------------------------
-aai.settings.api_key = "27879e3826214e3885ad655d718e41dc"
+aai.settings.api_key = "APIKEY"
 
 # Hugging Face sentiment model
 sentiment_pipeline = pipeline(
@@ -86,3 +86,4 @@ if uploaded_file is not None:
 
         # Chart
         st.bar_chart(sentiment_counts)
+
